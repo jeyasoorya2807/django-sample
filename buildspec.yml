@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - pip3 install --upgrade pip
+      - pip3 install -r requirements.txt
+
+  pre_build:
+    command:
+      - python3 --version
+
+artifacts:
+  files:
+    - '**/*'
